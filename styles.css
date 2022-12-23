@@ -108,27 +108,30 @@ background-position: center;
     margin: 8px 0;
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 40px;
     background-color: #1c1c1c;
     color: white;
     cursor: pointer;
+    min-width: 50%;
 
 }
 
 #character-display #new-character-button {
-    margin-top: 2rem;
+    
     padding: 12px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 40px;
     background-color: #1c1c1c;
     color: white;
     cursor: pointer;
     text-align: center;
+    min-width: 50%;
 }
 
 .buttons {
     /* justify-content: center; */
     /* justify-content: space-between; */
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
 }
@@ -146,8 +149,8 @@ background-position: center;
 }
 
 .portrait {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     background-image: url(./images/portrait-1.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -186,7 +189,7 @@ background-position: center;
         flex-direction: column;
         align-items: center;
         max-width: 84vw;
-        padding: 2.5rem;
+        padding: 5rem;
         background-color: gray;
         border-radius: 40px;
         margin: auto;
@@ -214,5 +217,8 @@ background-position: center;
         justify-content: space-between;
         display: flex;
         flex-flow: column;
+        min-width: 100%;
     }
+
+
   }
