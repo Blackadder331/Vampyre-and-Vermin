@@ -5,33 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
     <!-- character creator page -->
     <div id="character-creator">
     <form>
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="class">Class:</label><br>
-      <input type="text" id="class" name="class"><br>
-      <label for="str">STR:</label><br>
-      <input type="number" id="str" name="str"><br>
-      <label for="dex">DEX:</label><br>
-      <input type="number" id="dex" name="dex"><br>
-      <label for="sta">STA:</label><br>
-      <input type="number" id="sta" name="sta"><br>
-      <label for="wis">WIS:</label><br>
-      <input type="number" id="wis" name="wis"><br>
-      <label for="int">INT:</label><br>
-      <input type="number" id="int" name="int"><br>
-      <label for="agi">AGI:</label><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+      <label for="class">Class:</label>
+      <input type="text" id="class" name="class">
+      <label for="str">STR:</label>
+      <input type="number" id="str" name="str">
+      <label for="dex">DEX:</label>
+      <input type="number" id="dex" name="dex">
+      <label for="sta">STA:</label>
+      <input type="number" id="sta" name="sta">
+      <label for="wis">WIS:</label>
+      <input type="number" id="wis" name="wis">
+      <label for="int">INT:</label>
+      <input type="number" id="int" name="int">
+      <label for="agi">AGI:</label>
       <input type="number" id="agi" name="agi"><br>
       <button type="submit">Create Character</button>
     </form> 
   </div>
   
  <!-- character display page -->
-    <div id="character-display">
+    <div id="character-display" style="display: none;">
         <h1 id="name"></h1>
         <p>Class: <span id="class"></span></p>
         <p>STR: <span id="str"></span></p>
@@ -42,7 +44,7 @@
         <p>AGI: <span id="agi"></span></p>
         <button id="new-character-button">Create New Character</button>
     </div>
-  
+</div>
   
     
 </body>

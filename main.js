@@ -47,7 +47,7 @@ newCharacterButton.addEventListener('click', () => {
 const character = localStorage.getItem('character');
 if (character) {
   document.querySelector('#character-creator').style.display = 'none';
-  characterDisplay.style.display = 'block';
+  characterDisplay.style.display = 'flex';
 
   const characterData = JSON.parse(character);
   characterDisplay.querySelector('#name').textContent = characterData.name;
