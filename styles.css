@@ -125,7 +125,8 @@ align-items: center;
 }
 
 #character-creator #name::placeholder{
-color: #1c1c1c;
+color: #9a9a9a;
+font-weight: 200;
 }
 
 #character-creator button {
@@ -179,13 +180,13 @@ color: #1c1c1c;
     display: flex;
     flex-direction: column;
     align-items: left;
-    max-width: 60rem;
+    max-width: 46rem;
     background-color: #fff;
     color: #1c1c1c;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 5rem;
+    padding: 6rem 5rem;
     border-radius: 10px;
     margin-left: 8rem;
     min-width: 44rem;
@@ -279,7 +280,7 @@ color: #1c1c1c;
 #class-selector {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-flow: wrap;
 }
 
@@ -336,6 +337,22 @@ color: #1c1c1c;
     justify-content: center;
 }
 
+.card-headline {
+    line-height: 1;
+    text-align: center;
+    font-size: 4.5rem;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+#character-creator #name {
+    margin: 8px 0 2rem 0;
+    max-width: none;
+    min-width: 30rem;
+    font-size: 1.75rem;
+    font-family: serif;
+    text-align: center;
+}
 
 
 /* ANIMATION */
@@ -440,6 +457,10 @@ color: #1c1c1c;
 
 @media only screen and (max-width: 900px) {
     
+    #character-display #new-character-button, #delete-character-button {
+        min-width: 28rem;
+    }
+
     .holder {
         min-width: 30rem;
     }
@@ -457,7 +478,7 @@ color: #1c1c1c;
         display: flex;
         flex-direction: column;
         align-items: center;
-        max-width: 84vw;
+        max-width: 70vw;
         padding: 5rem;
         margin: auto;
         min-width: 40rem;
@@ -467,6 +488,7 @@ color: #1c1c1c;
         max-width: 8rem;
         padding: 15px 15px;
         width: 11rem;
+        min-width: 18rem;
         
     }
 
@@ -475,7 +497,18 @@ color: #1c1c1c;
         padding-right: 3rem;
     } */
 
+    .traits{
+        margin-top: 2rem;
+    }
 
+    .buttons {
+        margin-top: 3rem;
+    }
+
+    h4 {
+        margin-top: 0;
+        padding-top: 0;
+    }
 
     #character-display p {
         text-align: center;
@@ -536,6 +569,10 @@ color: #1c1c1c;
 }
 
 @media only screen and (max-width: 570px) {
+    #character-display #new-character-button, #delete-character-button {
+        min-width: 5rem;
+    }
+    
     #character-creator button{
         padding: 10px 15px;
         
