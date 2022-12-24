@@ -122,7 +122,7 @@ form.addEventListener('submit', (event) => {
 
   // Hide the character creator form and display the character stats
   document.querySelector('#character-creator').style.display = 'none';
-  characterDisplay.style.display = 'block';
+  characterDisplay.style.display = 'flex';
 
   // Set the character stats in the display
   characterDisplay.querySelector('#name').textContent = character.name;
@@ -138,15 +138,19 @@ form.addEventListener('submit', (event) => {
   switch (character.class) {
     case 'Hunter':
       portrait.style.backgroundImage = "url('./images/hunt.png')";
+      document.body.style.backgroundImage = "url('./images/castle-2.png')";
       break;
     case 'Alchemist':
       portrait.style.backgroundImage = "url('./images/alchemist.png')";
+      document.body.style.backgroundImage = "url('./images/castle-2.png')";
       break;
     case 'Knight':
       portrait.style.backgroundImage = "url('./images/knight.png')";
+      document.body.style.backgroundImage = "url('./images/castle-2.png')";
       break;
     case 'Thief':
       portrait.style.backgroundImage = "url('./images/thief.png')";
+      document.body.style.backgroundImage = "url('./images/castle-2.png')";
       break;
 }
 
@@ -158,7 +162,7 @@ newCharacterButton.addEventListener('click', () => {
 
   // Hide the character display and show the character creator form
   characterDisplay.style.display = 'none';
-  document.querySelector('#character-creator').style.display = 'block';
+  document.querySelector('#character-creator').style.display = 'flex';
 });
 
 // Check if a character already exists in local storage and display it if it does
@@ -177,3 +181,20 @@ if (character) {
   characterDisplay.querySelector('#int').textContent = characterData.int;
   characterDisplay.querySelector('#agi').textContent = characterData.agi;
 }
+
+// Delete button
+const deleteButton = document.querySelector('#delete-character-button');
+
+
+deleteButton.addEventListener('click', () => {
+    // Clear the character from local storage
+    localStorage.removeItem('character');
+  
+    // Hide the character display and show the character creator form
+    document.querySelector('#character-display').style.display = 'none';
+    document.querySelector('#character-creator').style.display = 'block';
+  
+    // Reset the body's background image
+    document.body.style.backgroundImage = "url('./images/castle-1.png')";
+
+});

@@ -8,7 +8,7 @@
 html, body { 
     margin: 0; 
     padding: 0; 
-    font-size: 15px; 
+    font-size: 13px; 
     /* ^ 15px rem base number for type scaling*/
     color: white;
     background-color: #222222;
@@ -18,8 +18,9 @@ html, body {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5.5rem;
     padding: 0;
+    font-family: serif;
 }
 
 h2 {
@@ -27,6 +28,7 @@ h2 {
     padding: 0;
     margin: 0;
     margin-bottom: 1rem;
+    font-family: serif;
 }
 
 h3 {
@@ -108,7 +110,7 @@ align-items: center;
 
 #character-creator input {
     margin: 8px 1rem;
-    padding: 12px 20px;
+    padding: 8px 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
     max-width: 16.5rem;
@@ -119,6 +121,11 @@ align-items: center;
 #character-creator #name {
     margin: 8px 0 2rem 0;
     max-width: none;
+    min-width: 30rem;
+}
+
+#character-creator #name::placeholder{
+color: #1c1c1c;
 }
 
 #character-creator button {
@@ -147,7 +154,7 @@ align-items: center;
 }
 
 
-#character-display #new-character-button {
+#character-display #new-character-button, #delete-character-button{
     
     padding: 12px 20px;
     border: none;
@@ -172,7 +179,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     align-items: left;
-    max-width: 40rem;
+    max-width: 60rem;
     background-color: #fff;
     color: #1c1c1c;
     background-size: cover;
@@ -181,7 +188,7 @@ align-items: center;
     padding: 5rem;
     border-radius: 10px;
     margin-left: 8rem;
-    min-width: 40rem;
+    min-width: 44rem;
 }
 
 .portrait {
@@ -209,7 +216,7 @@ align-items: center;
     line-height: 1.1;
 }
 #character-display .class {
-    font-size: 2rem;
+    font-size: 2.25rem;
     font-weight: 200;
     line-height: 1.1;
 }
@@ -250,13 +257,14 @@ align-items: center;
 
 
 
-#character-display .delete {
+#delete-character-button {
     border: 2px solid #1c1c1c !important;
     background-color: #fff !important;
     color: #1c1c1c !important;
+    cursor: pointer !important;
 }
 
-#character-display .delete:hover {
+#delete-character-button:hover {
     background-color: rgb(208, 191, 117) !important;
     transition: .35s ease-out !important;
     border: 2px solid transparent !important;
@@ -312,6 +320,22 @@ align-items: center;
     outline: 3px solid rgb(208, 191, 117);
     transition: .2s ease-out;
 }
+
+.stat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#character-creator .stat-container button {
+    padding: 12px 18px;
+}
+
+.stat-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* ANIMATION */
@@ -415,6 +439,11 @@ align-items: center;
  /* MOBILE */
 
 @media only screen and (max-width: 900px) {
+    
+    .holder {
+        min-width: 30rem;
+    }
+    
     #character-display {
         display: flex;
         flex-direction: column;
@@ -431,18 +460,26 @@ align-items: center;
         max-width: 84vw;
         padding: 5rem;
         margin: auto;
-        min-width: 10rem;
+        min-width: 40rem;
     }
 
-    #character-creator input{
+    #character-display input{
         max-width: 8rem;
-        padding: 10px 15px;
+        padding: 15px 15px;
+        width: 11rem;
+        
     }
+
+    /* #class-selector input {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    } */
 
 
 
     #character-display p {
         text-align: center;
+        min-width: 10rem;
     }
     .container {
         display: flex;
@@ -492,7 +529,12 @@ align-items: center;
     .stats{
         padding-bottom: 1rem;
     }
+
+    #character-creator #name {
+        min-width: 1rem; 
+    }
 }
+
 @media only screen and (max-width: 570px) {
     #character-creator button{
         padding: 10px 15px;
@@ -502,6 +544,7 @@ align-items: center;
         max-width: 2rem;
         min-width: 3rem;
         padding: 5px;
+        min-width: 12rem
     }
 }
 

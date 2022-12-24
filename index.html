@@ -11,87 +11,95 @@
     <div class="container">
     <!-- character creator page -->
     <div id="character-creator" class="slide">
-    <form spellcheck="false">
-        <h2>Name</h2>
-      <label for="name" style="display: none;">Name:</label>
-      <input type="text" id="name" name="name">
-        <div><label style="display: none;">Class:</label></div>
-        <!-- <h2>class</h2> -->
-        <div id="class-selector">
+        <div class="holder">
+            <form spellcheck="false">
+                
+                <div id="class-selector" class="fade">
+                    
+                    <br>
+                    <div>
+                        <input type="radio" id="hunter" name="class" value="Hunter">
+                        <label for="hunter"><img src="./images/hunt.png" alt="Hunter" style="width: 80px; height: 80px; border-radius: 50%;">Hunter</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="radio" id="alchemist" name="class" value="Alchemist">
+                        <label for="alchemist"><img src="./images/alchemist.png" alt="Alchemist" style="width: 80px; height: 80px; border-radius: 50%;">Alchemist</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="radio" id="knight" name="class" value="Knight">
+                        <label for="knight"><img src="./images/knight.png" alt="Knight" style="width: 80px; height: 80px; border-radius: 50%;">Knight</label>
+                    </div>
+                    <br>
+                    <div>
+                        <input type="radio" id="thief" name="class" value="Thief">
+                        <label for="thief"><img src="./images/thief.png" alt="Thief" style="width: 80px; height: 80px; border-radius: 50%;">Thief</label>
+                    </div>
+                </div>
             
-            <br>
-            <div>
-                <input type="radio" id="hunter" name="class" value="Hunter">
-                <label for="hunter"><img src="./images/hunt.png" alt="Hunter" style="width: 80px; height: 80px; border-radius: 50%;">Hunter</label>
-            </div>
-            <br>
-            <div>
-                <input type="radio" id="alchemist" name="class" value="Alchemist">
-                <label for="alchemist"><img src="./images/alchemist.png" alt="Alchemist" style="width: 80px; height: 80px; border-radius: 50%;">Alchemist</label>
-            </div>
-            <br>
-            <div>
-                <input type="radio" id="knight" name="class" value="Knight">
-                <label for="knight"><img src="./images/knight.png" alt="Knight" style="width: 80px; height: 80px; border-radius: 50%;">Knight</label>
-            </div>
-            <br>
-            <div>
-                <input type="radio" id="thief" name="class" value="Thief">
-                <label for="thief"><img src="./images/thief.png" alt="Thief" style="width: 80px; height: 80px; border-radius: 50%;">Thief</label>
-            </div>
-        </div>
-    
-        <br>
-        <div>
-            <label for="str">STR:</label>
-            <input type="number" id="str" name="str" value="70">
-            <button type="button" id="str-decrease">-</button>
-            <button type="button" id="str-increase">+</button>
-        </div>
+                <br>
+                <!-- <h2>New Character</h2> -->
+            <label for="name" style="display: none;">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name">
+                <div><label style="display: none;">Class:</label></div>
+                <!-- <h2>class</h2> -->
+                <div class="stat-wrapper">
+                <div class="stat-container fade-slow">
+                    <div>
+                        <label for="str">STR:</label>
+                        <input type="number" id="str" name="str" value="70">
+                        <button type="button" id="str-decrease">-</button>
+                        <button type="button" id="str-increase">+</button>
+                    </div>
 
-        <div>
-            <label for="dex">DEX:</label>
-            <input type="number" id="dex" name="dex" value="80">
-            <button type="button" id="dex-decrease">-</button>
-            <button type="button" id="dex-increase">+</button>
+                    <div>
+                        <label for="dex">DEX:</label>
+                        <input type="number" id="dex" name="dex" value="80">
+                        <button type="button" id="dex-decrease">-</button>
+                        <button type="button" id="dex-increase">+</button>
+                    </div>
+
+                    <div>
+                        <label for="sta">STA:</label>
+                        <input type="number" id="sta" name="sta" value="75">
+                        <button type="button" id="sta-decrease">-</button>
+                        <button type="button" id="sta-increase">+</button>
+                    </div>
+
+                    <div>
+                        <label for="wis">WIS:</label>
+                        <input type="number" id="wis" name="wis" value="60">
+                        <button type="button" id="wis-decrease">-</button>
+                        <button type="button" id="wis-increase">+</button>
+                    </div>
+
+                    <div>
+                        <label for="int">INT:</label>
+                        <input type="number" id="int" name="int" value="65">
+                        <button type="button" id="int-decrease">-</button>
+                        <button type="button" id="int-increase">+</button>
+                    </div>
+
+                    <div>
+                        <label for="agi">AGI:</label>
+                        <input type="number" id="agi" name="agi" value="78">
+                        <button type="button" id="agi-decrease">-</button>
+                        <button type="button" id="agi-increase">+</button>
+                    </div>
+                </div>
+                </div>
+
+                <br>
+                <button class="fade-slow-er"type="submit">Create Character</button>
+
+            </form> 
         </div>
-
-        <div>
-            <label for="sta">STA:</label>
-            <input type="number" id="sta" name="sta" value="75">
-            <button type="button" id="sta-decrease">-</button>
-            <button type="button" id="sta-increase">+</button>
-        </div>
-
-        <div>
-            <label for="wis">WIS:</label>
-            <input type="number" id="wis" name="wis" value="60">
-            <button type="button" id="wis-decrease">-</button>
-            <button type="button" id="wis-increase">+</button>
-        </div>
-
-        <div>
-            <label for="int">INT:</label>
-            <input type="number" id="int" name="int" value="65">
-            <button type="button" id="int-decrease">-</button>
-            <button type="button" id="int-increase">+</button>
-        </div>
-
-        <div>
-            <label for="agi">AGI:</label>
-            <input type="number" id="agi" name="agi" value="78">
-            <button type="button" id="agi-decrease">-</button>
-            <button type="button" id="agi-increase">+</button>
-        </div>
-
-        <br>
-        <button type="submit">Create Character</button>
-
-    </form> 
   </div>
   
  <!-- character display page -->
     <div id="character-display" class="slide" style="display: none;">
+        
         <div id="portrait" class="portrait"></div>
         <h1 id="name" class="fade"></h1>
         <div class="class fade">
@@ -126,7 +134,7 @@
             </div>
         <div class="buttons ">
         <button id="new-character-button" class="fade-slow">New Character</button>
-        <button id="new-character-button" class="delete fade-slow-er">Delete Character</button>
+        <button id="delete-character-button" class="delete fade-slow-er">Delete Character</button>
         </div>
     </div>
 </div>
