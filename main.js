@@ -198,3 +198,13 @@ deleteButton.addEventListener('click', () => {
     document.body.style.backgroundImage = "url('./images/castle-1.png')";
 
 });
+
+// Get the start button
+const startButton = document.querySelector('#start-button');
+// Add a click event listener to the start button
+startButton.addEventListener('click', () => {
+  // Hide the splash page and show the character creator form
+  document.querySelector('.splash').style.display = 'none';
+  document.querySelector('#character-creator').style.display = 'block';
+  document.body.style.backgroundImage = "url('./images/castle-1.png')";
+});
