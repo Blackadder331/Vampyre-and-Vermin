@@ -87,6 +87,7 @@ background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 40rem;
 }
   
 #character-creator form {
@@ -97,17 +98,23 @@ background-position: center;
     /* min-height: 100vh; */
 }
   
-#character-creator label {
-    margin: 8px 0;
-}
-  
+
+
 #character-creator input {
-    margin: 8px 0;
+    margin: 8px 1rem;
     padding: 12px 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    max-width: 15rem;
+    min-width: 1rem;
 }
   
+
+#character-creator #name {
+    margin: 8px 0 1rem 0;
+    max-width: none;
+}
+
 #character-creator button {
     margin: 8px 0;
     padding: 18px 26px;
@@ -122,6 +129,17 @@ background-position: center;
     font-size: 14px;
 
 }
+
+#character-creator button:hover {
+    background-color: rgb(208, 191, 117);
+    transition: .5s ease-out;
+}
+
+#character-display #new-character-button:hover {
+    background-color: rgb(208, 191, 117);
+    transition: .5s ease-out;
+}
+
 
 #character-display #new-character-button {
     
@@ -183,6 +201,12 @@ background-position: center;
     font-weight: 200;
     line-height: 1.1;
 }
+#character-display .class {
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 1.1;
+}
+
 .stats h4{
     min-width: 60%;
     text-transform: uppercase;
@@ -223,9 +247,61 @@ background-position: center;
     color: #1c1c1c !important;
 }
 
+#character-display .delete:hover {
+    background-color: rgb(208, 191, 117) !important;
+    transition: .35s ease-out !important;
+    border: 2px solid transparent !important;
+}
+
 .resources .hp, .mp  {
     margin-bottom: 2rem;
 }
+
+/* Class selector syles */
+#class-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Style for radio buttons */
+#class-selector input[type="radio"] {
+    display: none;
+}
+
+/* Style for radio button labels */
+#class-selector label {
+    display: inline-block;
+    border: 0px solid transparent;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+}
+
+/* Style for selected radio button label */
+#class-selector input[type="radio"]:checked + label {
+    /* border-color: gold ;
+    border: 20px solid gold; */
+    outline: .45rem solid rgb(208, 191, 117);
+    scale: 1.25;
+    transition: .5s ease-out;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+
+#class-selector input[type="radio"]:hover + label{
+    scale: 1.25;
+    transition: .5s ease-out;
+}
+
+
+#character-creator input:focus{
+    outline: 3px solid rgb(208, 191, 117);
+    transition: .2s ease-out;
+}
+
 
 /* ANIMATION */
 
@@ -336,6 +412,19 @@ background-position: center;
         padding: 5rem;
         margin: auto;
     }
+    #character-creator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 84vw;
+        padding: 5rem;
+        margin: auto;
+    }
+
+    #character-creator input{
+        max-width: 8rem;
+    }
+
     #character-display p {
         text-align: center;
     }

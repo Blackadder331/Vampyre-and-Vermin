@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const characterDisplay = document.querySelector('#character-display');
 const newCharacterButton = document.querySelector('#new-character-button');
+const portrait = document.querySelector('#portrait');
 
 // Stats start here
 // STR
@@ -132,6 +133,23 @@ form.addEventListener('submit', (event) => {
   characterDisplay.querySelector('#wis').textContent = character.wis;
   characterDisplay.querySelector('#int').textContent = character.int;
   characterDisplay.querySelector('#agi').textContent = character.agi;
+
+  // Set the portrait based on the selected character class
+  switch (character.class) {
+    case 'Hunter':
+      portrait.style.backgroundImage = "url('./images/hunt.png')";
+      break;
+    case 'Alchemist':
+      portrait.style.backgroundImage = "url('./images/alchemist.png')";
+      break;
+    case 'Knight':
+      portrait.style.backgroundImage = "url('./images/knight.png')";
+      break;
+    case 'Thief':
+      portrait.style.backgroundImage = "url('./images/thief.png')";
+      break;
+}
+
 });
 
 newCharacterButton.addEventListener('click', () => {
