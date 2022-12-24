@@ -10,7 +10,7 @@
 <body>
     <div class="container">
     <!-- character creator page -->
-    <div id="character-creator">
+    <div id="character-creator" class="slide">
     <form>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name">
@@ -38,15 +38,34 @@
         <h1 id="name" class="fade"></h1>
         <div class="class fade">
         <p><span id="class" ></span></p>
-        </div>
-        <div class="stats">
-        <p class="fade">STR: <span id="str"></span></p>
-        <p class="fade">DEX: <span id="dex"></span></p>
-        <p class="fade">STA: <span id="sta"></span></p>
-        <p class="fade">WIS: <span id="wis"></span></p>
-        <p class="fade">INT: <span id="int"></span></p>
-        <p class="fade">AGI: <span id="agi"></span></p>
-        </div>
+            </div>
+            <div class="traits">
+            <div class="stats">
+                <h4 class="fade">Stats</h4>
+                <div class="stats-col">
+                    <p class="fade">STR: <span id="str"></span></p>
+                    <p class="fade">DEX: <span id="dex"></span></p>
+                    <p class="fade">STA: <span id="sta"></span></p>
+                </div>
+                <div class="stats-col">
+                    <p class="fade">WIS: <span id="wis"></span></p>
+                    <p class="fade">INT: <span id="int"></span></p>
+                    <p class="fade">AGI: <span id="agi"></span></p>
+                </div>
+            </div>
+            <div class="resources fade">
+                <div class="hp">
+                <h4>Health</h4>
+                <p>130/130<sup>HP</sup></p>
+                
+                </div>
+                <div class="mp">
+                <h4>Mana</h4>
+                <p>70/70<sup>MP</sup></p>
+                
+                </div>
+            </div>
+            </div>
         <div class="buttons ">
         <button id="new-character-button" class="fade-slow">New Character</button>
         <button id="new-character-button" class="delete fade-slow-er">Delete Character</button>
