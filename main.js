@@ -2,6 +2,106 @@ const form = document.querySelector('form');
 const characterDisplay = document.querySelector('#character-display');
 const newCharacterButton = document.querySelector('#new-character-button');
 
+// Stats start here
+// STR
+const strDecreaseButton = document.querySelector('#str-decrease');
+const strIncreaseButton = document.querySelector('#str-increase');
+const strInput = document.querySelector('#str');
+
+strDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(strInput.value);
+  if (value > 0) {
+    strInput.value = value - 1;
+  }
+});
+
+strIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(strInput.value);
+  strInput.value = value + 1;
+});
+
+// DEX
+const dexDecreaseButton = document.querySelector('#dex-decrease');
+const dexIncreaseButton = document.querySelector('#dex-increase');
+const dexInput = document.querySelector('#dex');
+
+dexDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(dexInput.value);
+  if (value > 0) {
+    dexInput.value = value - 1;
+  }
+});
+dexIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(dexInput.value);
+  dexInput.value = value + 1;
+});
+
+// STA
+const staDecreaseButton = document.querySelector('#sta-decrease');
+const staIncreaseButton = document.querySelector('#sta-increase');
+const staInput = document.querySelector('#sta');
+
+staDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(staInput.value);
+  if (value > 0) {
+    staInput.value = value - 1;
+  }
+});
+staIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(staInput.value);
+  staInput.value = value + 1;
+});
+
+// WIS
+const wisDecreaseButton = document.querySelector('#wis-decrease');
+const wisIncreaseButton = document.querySelector('#wis-increase');
+const wisInput = document.querySelector('#wis');
+
+wisDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(wisInput.value);
+  if (value > 0) {
+    wisInput.value = value - 1;
+  }
+});
+wisIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(wisInput.value);
+  wisInput.value = value + 1;
+});
+
+// INT
+const intDecreaseButton = document.querySelector('#int-decrease');
+const intIncreaseButton = document.querySelector('#int-increase');
+const intInput = document.querySelector('#int');
+
+intDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(intInput.value);
+  if (value > 0) {
+    intInput.value = value - 1;
+  }
+});
+intIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(intInput.value);
+  intInput.value = value + 1;
+});
+
+// AGI
+const agiDecreaseButton = document.querySelector('#agi-decrease');
+const agiIncreaseButton = document.querySelector('#agi-increase');
+const agiInput = document.querySelector('#agi');
+
+agiDecreaseButton.addEventListener('click', () => {
+  let value = parseInt(agiInput.value);
+  if (value > 0) {
+    agiInput.value = value - 1;
+  }
+});
+agiIncreaseButton.addEventListener('click', () => {
+  let value = parseInt(agiInput.value);
+  agiInput.value = value + 1;
+});
+
+
+// Rest of the JS
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 

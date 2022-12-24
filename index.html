@@ -16,19 +16,53 @@
       <input type="text" id="name" name="name">
       <label for="class">Class:</label>
       <input type="text" id="class" name="class">
-      <label for="str">STR:</label>
-      <input type="number" id="str" name="str">
-      <label for="dex">DEX:</label>
-      <input type="number" id="dex" name="dex">
-      <label for="sta">STA:</label>
-      <input type="number" id="sta" name="sta">
-      <label for="wis">WIS:</label>
-      <input type="number" id="wis" name="wis">
-      <label for="int">INT:</label>
-      <input type="number" id="int" name="int">
-      <label for="agi">AGI:</label>
-      <input type="number" id="agi" name="agi"><br>
-      <button type="submit">Create Character</button>
+
+        <br>
+        <div>
+            <label for="str">STR:</label>
+            <input type="number" id="str" name="str" value="70">
+            <button type="button" id="str-decrease">-</button>
+            <button type="button" id="str-increase">+</button>
+        </div>
+
+        <div>
+            <label for="dex">DEX:</label>
+            <input type="number" id="dex" name="dex" value="80">
+            <button type="button" id="dex-decrease">-</button>
+            <button type="button" id="dex-increase">+</button>
+        </div>
+
+        <div>
+            <label for="sta">STA:</label>
+            <input type="number" id="sta" name="sta" value="75">
+            <button type="button" id="sta-decrease">-</button>
+            <button type="button" id="sta-increase">+</button>
+        </div>
+
+        <div>
+            <label for="wis">WIS:</label>
+            <input type="number" id="wis" name="wis" value="60">
+            <button type="button" id="wis-decrease">-</button>
+            <button type="button" id="wis-increase">+</button>
+        </div>
+
+        <div>
+            <label for="int">INT:</label>
+            <input type="number" id="int" name="int" value="65">
+            <button type="button" id="int-decrease">-</button>
+            <button type="button" id="int-increase">+</button>
+        </div>
+
+        <div>
+            <label for="agi">AGI:</label>
+            <input type="number" id="agi" name="agi" value="78">
+            <button type="button" id="agi-decrease">-</button>
+            <button type="button" id="agi-increase">+</button>
+        </div>
+
+        <br>
+        <button type="submit">Create Character</button>
+
     </form> 
   </div>
   
@@ -36,7 +70,7 @@
     <div id="character-display" class="slide" style="display: none;">
         <div class="portrait"></div>
         <h1 id="name" class="fade"></h1>
-        <div class="class fade">
+        <div class="class-name fade">
         <p><span id="class" ></span></p>
             </div>
             <div class="traits">
